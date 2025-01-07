@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    /* Colores principales */
+    --color-grey-700:rgb(51, 51, 51);
+    --color-grey-800:rgb(31, 31, 31);
+    --color-grey-900:rgb(20, 20, 20);
+    /* Colores secudaarios */
+    --color-green:rgb(197, 248, 42);
+    --color-white:rgb(255, 255, 255);
+
+    /* Tipografia */
+    --font-family:'Inter';
+    --font-size-24: 24px;
+    --font-size-22: 22px;
+    --font-size-14: 14px;
+    --font-size-12: 12px;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --line-height: 150%;
+
+    /* Espaciado */
+    --spacing-40: 40px;
+    --spacing-24: 24px;
+    --spacing-20: 20px;
+    --spacing-16: 16px;
+    --spacing-14: 14px;
+    --spacing-12: 12px;
+    --spacing-8: 8px;
+    --spacing-4: 4px;
+}
+
+/* recet basico */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-grey-900);
+    font-family: var(--font-family);
+    color: var(--color-white);
+    text-align: center;
+}
+.card {
+    background-color: var(--color-grey-800);
+    border-radius: 8px;
+    padding: var(--spacing-40);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-24);
+}
+.perfil img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+.perfil figcaption {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height);
+}
+.ubicacion {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height);
+    margin-top: var(--spacing-4);
+    color: var(--color-green);
+}
+.descripcion {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+    line-height: var(--line-height);
+    margin: var(--spacing-24) 0;
+    font-family: var(--font-family);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-16);
+}
+.menu a {
+    background-color: var(--color-grey-700);
+    font-size: var(--font-size-14);
+    padding: var(--spacing-14); 
+    text-decoration: none;
+    color: var(--color-white);
+    border-radius: 8px;
+    font-weight: var(--font-weight-700);
+    width: 300px;
+}
+.menu a:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-900);
+}
+@media screen and (max-width: 425px) {
+    main {
+        padding: var(--spacing-20);
+    }
+    .card {
+        padding: var(--spacing-20);
+    }
+    .perfil img {
+        max-width: 60px;
+    }
+    .perfil figcaption {
+        font-size: var(--font-size-22);
+    }
+    .ubicacion {
+        font-size: var(--font-size-12);
+    }
+    .descripcion {
+        font-size: var(--font-size-12);
+        /* margin: var(--spacing-16) 0; */
+    }
+    .menu {
+        gap: var(--spacing-12);
+    }
+    .menu a {
+        font-size: var(--font-size-12);
+        padding: var(--spacing-12);
+        width: 230px;
+    }
+
+}
