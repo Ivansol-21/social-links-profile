@@ -72,7 +72,7 @@ main {
     gap: var(--spacing-24);
 }
 .perfil img {
-    max-width: 85px;
+    max-width: 90px;
     height: auto;
     border-radius: 50%;
 }
